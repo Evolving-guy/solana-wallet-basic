@@ -12,8 +12,8 @@ const wallet = new Keypair()
 const publicKey = new PublicKey(wallet._keypair.publicKey)
 const secretKey = wallet._keypair.secretKey
 
-console.log(publicKey)
-console.log(secretKey)
+console.log(publicKey)  //displays the public key
+console.log(secretKey)  //displays the secret key
 
 const getWalletBalance = async() => {
     try {
