@@ -7,15 +7,15 @@ const {
     sendAndConfirmRawTransaction
 } = require("@solana/web3.js")  //the solana js module for devs.
 
-const wallet = new Keypair()
+const wallet = new Keypair()                                 //making a new wallet
 
-const publicKey = new PublicKey(wallet._keypair.publicKey)
+const publicKey = new PublicKey(wallet._keypair.publicKey)             
 const secretKey = wallet._keypair.secretKey
 
 console.log(publicKey)  //displays the public key
 console.log(secretKey)  //displays the secret key
 
-const getWalletBalance = async() => {                                                  //making a new wallet
+const getWalletBalance = async() => {                                                  //getting wallet balance 
     try {
         const connection = new Connection(clusterApiUrl('devnet'), 'confirmed')
         const walletBalance = await connection.getBalance(publicKey)
